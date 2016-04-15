@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-nJ-bWo" customClass="TTLockView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="R9s-KS-tu7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R9s-KS-tu7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="R9s-KS-tu7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQH-V6-MUS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Pon-VA-fio"/>
+                                    <constraint firstAttribute="width" constant="67" id="V42-aj-07b"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pon-VA-fio"/>
+                                        <exclude reference="V42-aj-07b"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Pon-VA-fio"/>
+                                        <include reference="V42-aj-07b"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aQH-V6-MUS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Yt-QF-wtN"/>
+                            <constraint firstItem="BTI-nJ-bWo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O6a-mD-dfa"/>
+                            <constraint firstItem="BTI-nJ-bWo" firstAttribute="top" secondItem="aQH-V6-MUS" secondAttribute="bottom" constant="20" id="XDx-FO-Q08"/>
+                            <constraint firstAttribute="trailing" secondItem="BTI-nJ-bWo" secondAttribute="trailing" id="pK2-vU-rJw"/>
+                            <constraint firstItem="aQH-V6-MUS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vCz-kh-cW9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BTI-nJ-bWo"/>
+                                <exclude reference="aQH-V6-MUS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="O6a-mD-dfa"/>
+                                <exclude reference="XDx-FO-Q08"/>
+                                <exclude reference="pK2-vU-rJw"/>
+                                <exclude reference="4Yt-QF-wtN"/>
+                                <exclude reference="vCz-kh-cW9"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BTI-nJ-bWo"/>
+                                <include reference="aQH-V6-MUS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="O6a-mD-dfa"/>
+                                <include reference="XDx-FO-Q08"/>
+                                <include reference="pK2-vU-rJw"/>
+                                <include reference="4Yt-QF-wtN"/>
+                                <include reference="vCz-kh-cW9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="aQH-V6-MUS" id="3a0-ge-xNN"/>
+                        <outlet property="lockview" destination="BTI-nJ-bWo" id="gu9-va-WLZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="207"/>
+        </scene>
+    </scenes>
+</document>
